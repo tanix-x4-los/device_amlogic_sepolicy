@@ -9,6 +9,7 @@ dontaudit kernel device:dir { write create add_name remove_name rmdir };
 dontaudit kernel device:blk_file create_file_perms;
 
 allow kernel vendor_firmware_gpu_file:file { open read };
+allow kernel vendor_firmware_wifi_file:dir search;
 allow kernel vendor_firmware_wifi_file:file { open read };
 
 # For unlabeled firmware files in /vendor/firmware
